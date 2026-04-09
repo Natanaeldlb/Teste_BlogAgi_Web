@@ -5,6 +5,7 @@ export class BlogAgiPage {
   readonly agiBankInitial: Locator;
   readonly menuProdutos: Locator;
   readonly categoriesPix: Locator;
+
   readonly pixTitle: Locator;
   readonly pixContent: Locator;
   readonly inputEmailNewsletter: Locator;
@@ -35,6 +36,7 @@ export class BlogAgiPage {
 
     async accessPixPage() {
         await this.menuProdutos.hover();
+        await expect(this.categoriesPix).toBeVisible();
         await this.categoriesPix.click();
     }
 
