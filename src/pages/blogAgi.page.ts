@@ -5,7 +5,6 @@ export class BlogAgiPage {
   readonly agiBankInitial: Locator;
   readonly menuProdutos: Locator;
   readonly categoriesPix: Locator;
-  readonly colunasList: Locator;
   readonly pixTitle: Locator;
   readonly pixContent: Locator;
   readonly inputEmailNewsletter: Locator;
@@ -18,7 +17,6 @@ export class BlogAgiPage {
     this.agiBankInitial = page.locator('xpath=//*[@id="menu-item-3713"]/a/span[2]');
     this.menuProdutos = page.locator('xpath=//*[@id="menu-item-3714"]/a');
     this.categoriesPix = page.locator('xpath=//*[@id="menu-item-3725"]/a');
-    this.colunasList = page.locator('xpath=//*[@id="menu-item-3901"]/a/span[2]');
     this.pixTitle = page.locator('xpath=//*[@id="primary"]/section/h1');
     this.pixContent = page.locator('xpath=//*[@id="main"]/div');
     this.inputEmailNewsletter = page.locator('xpath=//*[@id="subscribe-field-blog_subscription-3"]');
@@ -33,7 +31,6 @@ export class BlogAgiPage {
 
     async accessBlogAgi() {
         await this.agiBankInitial.click();
-        await this.colunasList.click();
     }
 
     async accessPixPage() {
