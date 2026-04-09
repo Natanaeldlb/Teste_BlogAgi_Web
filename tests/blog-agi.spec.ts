@@ -14,7 +14,7 @@ test.describe('Blog do Agi - Teste Tecnico', () => {
     await blogAgiPage.validatePixContent();
   });
 
-  test('deve validar que o email ja foi utilizado para o cadastro newsletter', async ({ page }) => {
+  test('deve permitir cadastro na newsletter com um e-mail válido', async ({ page }) => {
     const blogAgiPage = new BlogAgiPage(page);
 
     await blogAgiPage.goTo();

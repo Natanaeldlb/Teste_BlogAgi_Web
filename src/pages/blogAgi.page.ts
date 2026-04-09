@@ -23,7 +23,7 @@ export class BlogAgiPage {
     this.inputEmailNewsletter = page.locator('xpath=//*[@id="subscribe-field-blog_subscription-3"]');
     this.titleNewsletter = page.locator('xpath=//*[@id="blog_subscription-3"]/h2');
     this.buttonAssinar = page.locator('xpath=//*[@id="subscribe-submit"]/button');
-    this.messageSuccessNewsletter = page.locator('xpath=//*[@id="blog_subscription-3"]/p');
+    this.messageSuccessNewsletter = page.locator('xpath=//*[@id="blog_subscription-3"]/div[1]/p');
   }
 
     async goTo() {
@@ -55,7 +55,9 @@ export class BlogAgiPage {
     }
 
     async fillEmailField() {
-        await this.inputEmailNewsletter.fill('natanaeldlb1@gmail.com');
+        const email = `natanaeldlb1+${Date.now()}@gmail.com`;
+        await this.inputEmailNewsletter.fill(email);
+        return email;
     }
 
     async validateFieldNewsletter() {
@@ -69,6 +71,6 @@ export class BlogAgiPage {
 
     async validateNewsletterSuccessMessage() {
         await expect(this.messageSuccessNewsletter).toBeVisible();
-        await expect(this.messageSuccessNewsletter).toContainText('Você já assinou este site. Verifique sua caixa de entrada.');
+        await expect(this.messageSuccessNewsletter).toContainText('Sucesso! Enviamos um e-mail para confirmar a sua assinatura.');
     }
 }
