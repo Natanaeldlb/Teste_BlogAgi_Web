@@ -14,12 +14,12 @@ Valida o fluxo de navegação pelo menu principal até a página de **Pix**, ver
 - título da página
 - conteúdo relacionado ao tema
 
-### 2. Cadastro na newsletter com e-mail válido
+### 2. Cadastro na newsletter com e-mail já cadastrado
 Valida o fluxo de inscrição na newsletter, verificando:
 - presença da seção de newsletter
 - preenchimento do e-mail
 - envio do formulário
-- mensagem de sucesso após a inscrição
+- mensagem de sucesso após a tentativa de inscrição com um email ja cadastrado
 
 ---
 
