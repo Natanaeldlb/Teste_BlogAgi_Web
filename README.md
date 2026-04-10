@@ -77,13 +77,13 @@ git --version
 ### 1. Clonar o repositório
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/Natanaeldlb/Teste_BlogAgi_Web.git
 ```
 
 ### 2. Acessar a pasta do projeto
 
 ```bash
-cd <NOME_DO_PROJETO>
+cd Teste_BlogAgi_Web
 ```
 
 ### 3. Instalar as dependências

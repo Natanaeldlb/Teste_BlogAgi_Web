@@ -15,7 +15,7 @@ export class BlogAgiPage {
   
   constructor(page: Page) {
     this.page = page;
-    this.agiBankInitial = page.locator('xpath=//*[@id="menu-item-3713"]/a/span[2]');
+    this.agiBankInitial = page.locator('#menu-item-3714');
     this.menuProdutos = page.locator('xpath=//*[@id="menu-item-3714"]/a');
     this.categoriesPix = page.locator('xpath=//*[@id="menu-item-3725"]/a');
     this.pixTitle = page.locator('xpath=//*[@id="primary"]/section/h1');
